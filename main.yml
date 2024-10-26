@@ -28,8 +28,7 @@
       tags: ['config', 'dock']
 
     - name: Dock | Restart
-      ansible.builtin.command:
-        cmd: killall Dock
+      ansible.builtin.command: "killall Dock"
       when: configure_dock
       tags: ['config', 'dock']
       changed_when: false

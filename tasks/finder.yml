@@ -47,3 +47,15 @@
     value: true
     state: present
   tags: ["finder"]
+- name: Finder | Disable icon rollover delay
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: NSToolbarTitleViewRolloverDelay
+    type: float
+    value: 0
+    state: present
+  tags: ["finder"]
+- name: Finder | post config restart
+  ansible.builtin.command: "killall Finder"
+  tags: ["finder"]
+  changed_when: false
