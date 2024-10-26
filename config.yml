@@ -190,6 +190,9 @@ vscode_extensions:
   - tamasfe.even-better-toml
 
 node_versions: # fnm names
+  - lts/fermium # node 14
+  - lts/gallium # node 16
   - lts/hydrogen # node 18
+  - lts/iron # node 20
   - "--lts"
   - "--latest"
