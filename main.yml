@@ -1,0 +1,26 @@
+---
+
+- name: Configure host.
+  hosts: all
+
+  vars_files:
+    - config.yml
+
+  roles:
+    - role: elliotweiser.osx-command-line-tools
+    - role: geerlingguy.mac.homebrew
+      tags: ['homebrew']
+    - role: geerlingguy.mac.mas
+      when: mas_installed_apps
+      tags: ['mas']
+    - role: geerlingguy.mac.dock
+      when: configure_dock
+      tags: ['dock']
+
+  tasks:
+    - name: Restart Dock
+      ansible.builtin.command:
+        cmd: killall Dock
+      when: configure_dock
+      tags: ['dock']
+      changed_when: false

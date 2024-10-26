@@ -1,0 +1,157 @@
+---
+homebrew_taps:
+  - cirruslabs/cli
+homebrew_installed_packages:
+  - act
+  - actionlint
+  - ansible
+  - ansible-lint
+  - asdf
+  - azure-cli
+  - caddy
+  - cirruslabs/cli/tart
+  - fnm
+  - gh
+  - git-crypt
+  - gnupg
+  - htop
+  - influxdb-cli
+  - jq
+  - lastpass-cli
+  - lazygit
+  - mkcert
+  - neovim
+  - nss
+  - packer
+  - sq
+  - sqlite
+  - tmux
+
+homebrew_cask_apps:
+  - adobe-acrobat-reader
+  - arc
+  - blender
+  - boop
+  - charles
+  - choosy
+  - dash
+  - docker
+  - figma
+  - firefox
+  - firefox@nightly
+  - font-fira-code
+  - fork
+  - google-chrome
+  - google-chrome@canary
+  - hex-fiend
+  - jordanbaird-ice
+  - licecap
+  - microsoft-edge
+  - microsoft-edge@canary
+  - microsoft-teams
+  - microsoft-outlook
+  - microsoft-word
+  - microsoft-onenote
+  - microsoft-excel
+  - microsoft-powerpoint
+  - onedrive
+  - obsidian
+  - powershell
+  - rapidapi
+  - raycast
+  - safari-technology-preview
+  - sublime-merge
+  - tart
+  - utm
+  - vagrant
+  - virtualbox
+  - visual-studio-code
+  - vmware-fusion
+  - windows-app
+  - zed
+
+mas_installed_apps:
+  - { id: 1446377255, name: "Menu World Time" }
+  - { id: 926036361, name: "LastPass" }
+  - { id: 497799835, name: "Xcode" }
+
+configure_dock: true
+dockitems_remove:
+  - Launchpad
+  - Messages
+  - Maps
+  - Photos
+  - FaceTime
+  - Contacts
+  - Reminders
+  - Freeform
+  - TV
+  - Music
+  - Keynote
+  - Numbers
+  - Pages
+  - "App Store"
+
+dockitems_persist:
+  - name: "Mail"
+    path: "/Applications/Mail.app/"
+    pos: 1
+  - name: "Calendar"
+    path: "/Applications/Calendar.app/"
+    pos: 2
+  - name: "Terminal"
+    path: "/Applications/Utilities/Terminal.app/"
+    pos: 3
+  - name: "Zed"
+    path: "/Applications/Zed.app/"
+    pos: 4
+  - name: "Obsidian"
+    path: "/Applications/Obsidian.app/"
+    pos: 5
+  - name: "Notes"
+    path: "/Applications/Notes.app/"
+    pos: 6
+  - name: "Arc"
+    path: "/Applications/Arc.app/"
+    pos: 7
+  - name: "Safari"
+    path: "/Applications/Safari.app/"
+    pos: 8
+  - name: "Safari Technology Preview"
+    path: "/Applications/Safari Technology Preview.app/"
+    pos: 9
+  - name: "Firefox"
+    path: "/Applications/Firefox.app/"
+    pos: 10
+  - name: "Firefox Nightly"
+    path: "/Applications/Firefox Nightly.app/"
+    pos: 11
+  - name: "Google Chrome"
+    path: "/Applications/Google Chrome.app/"
+    pos: 12
+  - name: "Google Chrome Canary"
+    path: "/Applications/Google Chrome Canary.app/"
+    pos: 13
+  - name: "Microsoft Edge"
+    path: "/Applications/Microsoft Edge.app/"
+    pos: 14
+  - name: "Microsoft Edge Canary"
+    path: "/Applications/Microsoft Edge Canary.app/"
+    pos: 15
+  - name: "Screen Sharing"
+    path: "/Applications/Utilities/Screen Sharing.app/"
+    pos: 16
+  - name: "Windows App"
+    path: "/Applications/Windows App.app/"
+    pos: 17
+  - name: "System Settings"
+    path: "/Applications/System Settings.app/"
+    pos: 18
+  - name: "Desktop"
+    path: "~/Desktop"
+  - name: "Downloads"
+    path: "~/Downloads"
+  - name: "Applications"
+    path: "/Applications"
+  - name: "dev"
+    path: "~/dev"
