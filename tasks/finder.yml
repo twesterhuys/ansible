@@ -1,0 +1,49 @@
+---
+- name: Finder - Change current search scope for all new searches
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: FXDefaultSearchScope
+    type: string
+    value: SCcf # SCev (this mac), SCcf (current folder), SCsp (previous scope)
+    state: present
+  tags: ["finder"]
+- name: Finder - Change finder view in all windows by default
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: FXPreferredViewStyle
+    type: string
+    value: Nlsv # icnv (icon view), Nlsv (list view), clmv (column view), Flwv (cover flow)
+    state: present
+  tags: ["finder"]
+- name: "Finder - Show status bar in Finder"
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: ShowStatusBar
+    type: bool
+    value: true
+    state: present
+  tags: ["finder"]
+- name: Finder - Disable the warning when changing a file extension
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: FXEnableExtensionChangeWarning
+    type: bool
+    value: true
+    state: present
+  tags: ["finder"]
+- name: Finder - Avoid creating .DS_Store files on network volumes
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: DSDontWriteNetworkStores
+    type: bool
+    value: true
+    state: present
+  tags: ["finder"]
+- name: Finder - Disable the warning before emptying the Trash
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: WarnOnEmptyTrash
+    type: bool
+    value: true
+    state: present
+  tags: ["finder"]

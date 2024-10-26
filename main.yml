@@ -24,3 +24,7 @@
       when: configure_dock
       tags: ['dock']
       changed_when: false
+
+    - name: Configure Finder
+      ansible.builtin.include_tasks: tasks/finder.yml
+      tags: ["finder"]

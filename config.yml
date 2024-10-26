@@ -61,7 +61,6 @@ homebrew_cask_apps:
   - raycast
   - safari-technology-preview
   - sublime-merge
-  - tart
   - utm
   - vagrant
   - virtualbox
