@@ -25,6 +25,42 @@
       tags: ['dock']
       changed_when: false
 
-    - name: Configure Finder
+    - name: Applications | Configure Finder
       ansible.builtin.include_tasks: tasks/finder.yml
-      tags: ["finder"]
+      tags: ['config', 'finder']
+
+    - name: Applications | Photos | Prevent Photos from opening automatically when devices are plugged in
+      community.general.osx_defaults:
+        domain: com.apple.ImageCapture
+        key: disableHotPlug
+        type: bool
+        value: true
+        state: present
+      tags: ['config', 'photos']
+
+    - name: Privacy | Feedback Assistant - Turn off Feedback Assistant data auto-gathering
+      community.general.osx_defaults:
+        domain: com.apple.appleseed.FeedbackAssistant
+        key: Autogather
+        type: bool
+        value: false
+        state: present
+      tags: ['config', 'privacy']
+
+    - name: Privacy | Advertising - Disable Personalized Ads
+      community.general.osx_defaults:
+        domain: com.apple.AdLib
+        key: allowApplePersonalizedAdvertising
+        type: int
+        value: 0
+        state: present
+      tags: ['config', 'privacy']
+
+    - name: Security | Software Updates | Check for updates each day
+      community.general.osx_defaults:
+        domain: com.apple.SoftwareUpdate
+        key: ScheduleFrequency
+        type: int
+        value: 1
+        state: present
+      tags: ['config', 'security']
