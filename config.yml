@@ -46,6 +46,7 @@ homebrew_cask_apps:
   - hex-fiend
   - jordanbaird-ice
   - licecap
+  - lulu
   - microsoft-edge
   - microsoft-edge@canary
   - microsoft-teams
