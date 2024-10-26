@@ -1,0 +1,19 @@
+---
+- name: Node | Install versions
+  ansible.builtin.command: "fnm install {{ item }}"
+  with_items: "{{ node_versions }}"
+  register: result
+  changed_when: "'already installed' not in result.stderr"
+  tags: ["config", "node"]
+
+- name: Node | Set default to lts-latest
+  ansible.builtin.command: "fnm default lts-latest"
+  register: result
+  changed_when: false
+  tags: ["config", "node"]
+
+- name: Node | Switch to default
+  ansible.builtin.command: "fnm use default"
+  register: result
+  changed_when: false
+  tags: ["config", "node"]

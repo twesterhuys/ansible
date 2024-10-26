@@ -188,3 +188,8 @@ vscode_extensions:
   - streetsidesoftware.code-spell-checker
   - sztheory.vscode-packer-powertools
   - tamasfe.even-better-toml
+
+node_versions: # fnm names
+  - lts/hydrogen # node 18
+  - "--lts"
+  - "--latest"

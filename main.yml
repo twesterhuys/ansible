@@ -71,3 +71,7 @@
       register: result
       changed_when: "'already installed' not in result.stdout"
       tags: ['config', 'vscode']
+
+    - name: Node | Install versions and set default lts-latest
+      ansible.builtin.include_tasks: tasks/node.yml
+      tags: ['config', 'node']
