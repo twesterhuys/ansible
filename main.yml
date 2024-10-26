@@ -18,12 +18,25 @@
       tags: ['dock']
 
   tasks:
-    - name: Restart Dock
+    - name: Dock | Set icon size
+      community.general.osx_defaults:
+        domain: com.apple.dock
+        key: tilesize
+        type: int
+        value: 24
+        state: present
+      tags: ['config', 'dock']
+
+    - name: Dock | Restart
       ansible.builtin.command:
         cmd: killall Dock
       when: configure_dock
-      tags: ['dock']
+      tags: ['config', 'dock']
       changed_when: false
+
+    - name: Screenshots | Configure
+      ansible.builtin.include_tasks: tasks/screenshots.yml
+      tags: ['config', 'screenshots']
 
     - name: Applications | Configure Finder
       ansible.builtin.include_tasks: tasks/finder.yml
