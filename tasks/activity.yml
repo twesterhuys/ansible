@@ -1,0 +1,18 @@
+---
+- name: Activity | Update frequency
+  community.general.osx_defaults:
+    domain: com.apple.ActivityMonitor
+    key: UpdatePeriod
+    type: int
+    value: 2
+    state: present
+  tags: ["activity"]
+
+- name: Activity | Dock Icon type
+  community.general.osx_defaults:
+    domain: com.apple.ActivityMonitor
+    key: IconType
+    type: int
+    value: 5 # Show the current CPU usages
+    state: present
+  tags: ["activity"]

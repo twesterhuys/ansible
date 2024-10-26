@@ -41,6 +41,10 @@
       ansible.builtin.include_tasks: tasks/finder.yml
       tags: ['config', 'finder']
 
+    - name: Applications | Configure Activity
+      ansible.builtin.include_tasks: tasks/activity.yml
+      tags: ['config', 'activity']
+
     - name: Applications | Photos | Prevent Photos from opening automatically when devices are plugged in
       community.general.osx_defaults:
         domain: com.apple.ImageCapture
