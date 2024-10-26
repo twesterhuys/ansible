@@ -64,3 +64,10 @@
         value: 1
         state: present
       tags: ['config', 'security']
+
+    - name: VS Code | Install extensions
+      ansible.builtin.command: "code --install-extension {{ item }}"
+      with_items: "{{ vscode_extensions }}"
+      register: result
+      changed_when: "'already installed' not in result.stdout"
+      tags: ['config', 'vscode']

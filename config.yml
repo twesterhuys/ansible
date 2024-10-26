@@ -155,3 +155,36 @@ dockitems_persist:
     path: "/Applications"
   - name: "dev"
     path: "~/dev"
+
+vscode_extensions:
+  - 4ops.packer
+  - bbenoist.vagrant
+  - christian-kohler.npm-intellisense
+  - dbaeumer.vscode-eslint
+  - eamodio.gitlens
+  - ecmel.vscode-html-css
+  - firefox-devtools.vscode-firefox-debug
+  - github.vscode-github-actions
+  - github.vscode-pull-request-github
+  - golang.go
+  - hbenl.vscode-test-explorer
+  - lucono.karma-test-explorer
+  - ms-azuretools.vscode-docker
+  - ms-edgedevtools.vscode-edge-devtools
+  - ms-python.debugpy
+  - ms-python.python
+  - ms-python.vscode-pylance
+  - ms-toolsai.jupyter
+  - ms-toolsai.jupyter-keymap
+  - ms-toolsai.jupyter-renderers
+  - ms-toolsai.vscode-jupyter-cell-tags
+  - ms-toolsai.vscode-jupyter-slideshow
+  - ms-vscode-remote.remote-containers
+  - ms-vscode.makefile-tools
+  - ms-vscode.powershell
+  - ms-vscode.test-adapter-converter
+  - redhat.ansible
+  - redhat.vscode-yaml
+  - streetsidesoftware.code-spell-checker
+  - sztheory.vscode-packer-powertools
+  - tamasfe.even-better-toml
