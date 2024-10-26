@@ -8,6 +8,8 @@ dotfiles_files:
   - .tmux.conf
   - .gitignore
   - .config/nvim/init.vim
+  - .config/zed/settings.json
+  - Library/Application Support/Code/User/settings.json
   - .zshrc
 
 homebrew_taps:
