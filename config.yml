@@ -1,4 +1,15 @@
 ---
+configure_dotfiles: true
+
+dotfiles_repo: https://github.com/twesterhuys/dotfiles.git
+dotfiles_repo_version: main
+dotfiles_repo_local_destination: ~/dev/dotfiles
+dotfiles_files:
+  - .tmux.conf
+  - .gitignore
+  - .config/nvim/init.vim
+  - .zshrc
+
 homebrew_taps:
   - cirruslabs/cli
 homebrew_installed_packages:
